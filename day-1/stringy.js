@@ -15,6 +15,8 @@
 
 function length(string) {
   // YOUR CODE HERE //
+  //return string length
+  return string.length;
 }
 
 /**
@@ -23,6 +25,8 @@ function length(string) {
 
 function toLowerCase(string) {
   // YOUR CODE HERE //
+  //return lower case string
+  return string.toLowerCase();
 }
 
 /**
@@ -31,6 +35,8 @@ function toLowerCase(string) {
 
 function toUpperCase(string) {
   // YOUR CODE HERE //
+  //return upper case string 
+  return string.toUpperCase();
 }
 
 /**
@@ -45,7 +51,15 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
   // YOUR CODE HERE //
+  //split string at spaces
+  let arr = string.split(' ');
+  //join string with dashes
+  let newStr = arr.join('-');
+  //makes string lower case
+  return newStr.toLowerCase();
 }
+
+
 
 /**
  * Given an input String and a single character, return true if the String
@@ -63,7 +77,16 @@ function toDashCase(string) {
 
 function beginsWith(string, char) {
   // YOUR CODE HERE //
+//if first letter of string is equal to string of one letter, return true
+if (string[0].toUpperCase() == char.toUpperCase()) {
+  return true;
+} else {
+//else, return false
+return false;
 }
+}
+
+
 
 /**
  * Given an input String and a single character, return true if the String
@@ -79,7 +102,19 @@ function beginsWith(string, char) {
  */
 function endsWith(string, char) {
   // YOUR CODE HERE //
+
+  //if the last letter is the same as the solo char, return true
+  if (string[string.length - 1].toLowerCase() === char.toLowerCase()) {
+  
+    return true;
+  } else {
+    //otherwise, return false
+    return false;
+  }
 }
+
+
+
 
 /**
  * Given two input Strings, return the Strings concatenated into one.
@@ -88,6 +123,9 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
   // YOUR CODE HERE //
+  //concat two strings together
+  return stringOne + stringTwo;
+
 }
 
 /**
@@ -100,9 +138,13 @@ function concat(stringOne, stringTwo) {
  * TIP: This Function pulls out all the arguments passed to it and stores them
  *      in an Array called args.
  */
-function join(stringOne, stringTwo) {
+function join() {
   // YOUR CODE HERE //
+  //move strings to an array
   var args = Array.from(arguments);
+  //join them together
+  console.log(args); 
+  return args.join('');
 }
 
 /**
@@ -116,6 +158,16 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
   // YOUR CODE HERE //
+//if string one is longer, return that one
+if (stringOne.length > stringTwo.length) {
+  return stringOne;
+} else if (stringTwo.length > stringOne.length){
+//if string two is longer, return that one
+return stringTwo;
+
+}
+
+
 }
 
 /**
