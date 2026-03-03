@@ -143,7 +143,7 @@ function join() {
   //move strings to an array
   var args = Array.from(arguments);
   //join them together
-  console.log(args); 
+ 
   return args.join('');
 }
 
@@ -179,6 +179,20 @@ return stringTwo;
  */
 function sortAscending(stringOne, stringTwo) {
   // YOUR CODE HERE //
+//put strings in an array
+  var args = Array.from(arguments);
+//sort array in alphabetical order
+args.sort();
+//if they start with the same letter, return 0
+if (args[0].toLowerCase() === args[1].toLowerCase()) {
+  return 0;
+} else if (args[0] === stringOne) {
+//if the first item in the array is stringOne, return 1
+return 1;
+} else if (args[0] === stringTwo) {
+//if the first item is stringTwo, return -1
+return -1;
+}
 }
 
 /**
@@ -190,7 +204,27 @@ function sortAscending(stringOne, stringTwo) {
  */
 function sortDescending(stringOne, stringTwo) {
   // YOUR CODE HERE //
+//store strings into an array
+var args = Array.from(arguments);
+//sort array in alphabetical order
+args.sort();
+//if the two strings are equal, return 0
+if (args[0].toLowerCase() === args[1].toLowerCase()) {
+  return 0;
+} else if (args[0] === stringOne) {
+//if the first item is stringOne, return -1
+return -1;
+} else if (args[0] === stringTwo) {
+//if the first item is stringTwo, return 1
+return 1;
 }
+}
+
+
+
+
+
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (
