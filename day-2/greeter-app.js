@@ -31,6 +31,22 @@
 
 function greeter(hour) {
   // YOUR CODE HERE
+//if it's before 11am, say gm
+if (hour <= 11) {
+  console.log('Good Morning!');
+} else if (hour <= 16){
+  //if before 4pm, say good afternoon
+  console.log('Good Afternoon!');
+} else if (hour <= 21){
+  //if before 9pm, say good evening
+  console.log('Good Evening!');
+} else if (hour <= 24) {
+  //if before midnight, say gn
+  console.log('Good Night!');
+}
+
+
+
 }
 
 /*

@@ -10,8 +10,16 @@
  * Given an input Array, loop forward over the Array and print its values
  * using console.log().
  */
+
 function printArrayValues(array) {
   // YOUR CODE HERE //
+//iterate over array with for loop
+for (let i = 0; i < array.length; i++) {
+  //log item in console
+  console.log(array[i]);
+}
+
+
 }
 
 /**
@@ -20,6 +28,13 @@ function printArrayValues(array) {
  */
 function printArrayValuesInReverse(array) {
   // YOUR CODE HERE //
+//iterate thru array backwards
+for (let i = array.length - 1; i >= 0; i--) {
+  //log to console
+  console.log(array[i]);
+}
+
+
 }
 
 /**
@@ -27,6 +42,16 @@ function printArrayValuesInReverse(array) {
  */
 function getObjectKeys(object) {
   // YOUR CODE HERE //
+//create empty array to add object keys to
+let arr = [];
+//use for in loop to iterate over object keys
+for (let key in object) {
+  //push key to array
+  arr.push(key);
+}
+//return array
+return arr;
+
 }
 
 /**
@@ -35,6 +60,14 @@ function getObjectKeys(object) {
  */
 function printObjectKeys(object) {
   // YOUR CODE HERE //
+//iterate thru keys in obj
+for (let key in object) {
+  //log 
+  console.log(key);
+}
+
+
+
 }
 
 /**
@@ -42,6 +75,15 @@ function printObjectKeys(object) {
  */
 function getObjectValues(object) {
   // YOUR CODE HERE //
+//init storage array
+let arr = [];
+//iterate thru object keys
+for (let key in object) {
+  //push value off key to storage
+  arr.push(object[key]);
+}
+//return it
+return arr;
 }
 
 /**
@@ -50,6 +92,14 @@ function getObjectValues(object) {
  */
 function printObjectValues(object) {
   // YOUR CODE HERE //
+//iterate thru keys in obj
+for (let key in object) {
+  //log
+  console.log(object[key]);
+}
+
+
+
 }
 
 /**
@@ -57,6 +107,16 @@ function printObjectValues(object) {
  */
 function getObjectLength(object) {
   // YOUR CODE HERE //
+//make counting variable
+let count = 0;
+//iterate thru keys in object
+for (let key in object) {
+  //count one for each key
+  count++;
+}
+//return number of keys
+return count;
+
 }
 
 /**
@@ -65,6 +125,16 @@ function getObjectLength(object) {
  */
 function printObjectValuesInReverse(object) {
   // YOUR CODE HERE //
+//create storage array
+let stArr = [];
+//iterate thru object and add to storage in reverse order
+for (let key in object) {
+  stArr.unshift(object[key]);
+}
+//loop thru storage and print
+for (let i = 0; i < stArr.length; i++){ 
+  console.log(stArr[i]);
+}
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////

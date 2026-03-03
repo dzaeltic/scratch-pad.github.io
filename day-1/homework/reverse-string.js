@@ -21,6 +21,14 @@
 
 function reverseString(input) {
   // YOUR CODE HERE //
+//create empty string to store new, backwards string
+let rStr = '';
+  //create for loop to iterate thru string backwwards
+for (let i = input.length - 1; i >= 0; i--) {
+  //access each character in string and add it new one in backwards order
+  rStr += input[i];
+}
+return rStr;
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
