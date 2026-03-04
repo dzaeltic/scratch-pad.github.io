@@ -14,6 +14,11 @@
 
 function createGreaterThanFilter(base) {
   // YOUR CODE HERE
+  //return a function that compares new input value to closure base value
+  return function (value) {
+    return value > base;
+  }
+  //returns true or false if value > base
 }
 
 /**
@@ -25,6 +30,10 @@ function createGreaterThanFilter(base) {
 
 function createLessThanFilter(base) {
   // YOUR CODE HERE
+  //return a function that compares if value is less than closure: base
+  return function (value) {
+    return value < base;
+  }
 }
 
 /**
@@ -37,6 +46,17 @@ function createLessThanFilter(base) {
 
 function createStartsWithFilter(startsWith) {
   // YOUR CODE HERE
+//return function that takes in a string and sees if it starts with indicated character
+return function (str) {
+  return str[0].toLowerCase() === startsWith.toLowerCase();
+}
+
+
+
+
+
+
+
 }
 
 /**
@@ -49,6 +69,12 @@ function createStartsWithFilter(startsWith) {
 
 function createEndsWithFilter(endsWith) {
   // YOUR CODE HERE //
+//return function that tests if a string ends with indicated character
+return function (str) {
+  return str[str.length - 1].toLowerCase() === endsWith.toLowerCase();
+}
+
+
 }
 
 /**
@@ -69,6 +95,16 @@ function createEndsWithFilter(endsWith) {
  */
 function modifyStrings(strings, modify) {
   // YOUR CODE HERE
+//create storage array
+let arr = [];
+  //loop over array and push modified string to storage
+  for (let i = 0; i < strings.length; i++){
+    arr.push(modify(strings[i]));
+  }
+//return new array
+return arr;
+
+
 }
 
 /**
@@ -91,6 +127,20 @@ function modifyStrings(strings, modify) {
 
 function allStringsPass(strings, test) {
   // YOUR CODE HERE //
+
+//loop over array 
+for (let i = 0; i < strings.length; i++){
+  //make switch to exit function if any string fails test
+  switch (false) {
+    case test(strings[i]):
+    return false;
+  }
+}
+//if all strings pass test, return true
+return true;
+
+
+
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////

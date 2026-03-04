@@ -16,6 +16,10 @@
  */
 function isArray(value) {
   // YOUR CODE HERE //
+//if value is array, return true; else, false
+if (Array.isArray(value)) {
+  return true;
+} else {return false;}
 }
 
 /**
@@ -34,6 +38,10 @@ function isArray(value) {
  */
 function isObject(value) {
   // YOUR CODE HERE //
+if (typeOf (value) === 'object' && value instanceof Date === false && Array.isArray(value) === false && value !== null) {
+return true;
+} else {return false;}
+
 }
 
 /**
