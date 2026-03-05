@@ -12,6 +12,14 @@
 
 function makeContact(id, nameFirst, nameLast) {
   // Solve this function first
+
+//return an object with specified key values
+  return {
+  id: id,
+  nameFirst: nameFirst,
+  nameLast: nameLast
+};
+
 }
 
 var contacts = [
@@ -51,6 +59,16 @@ var contacts = [
 
 function findContact(array, fullName) {
   // YOUR CODE HERE
+  //loop thru array 
+  for (let i = 0; i < array.length; i++) {
+    //check if full name matches current contact, and return if true
+    if (fullName === array[i].nameFirst + ' ' + array[i].nameLast) {
+      return array[i];
+    }
+      
+  } 
+//return undefined if user can't be found in database
+return undefined;
 }
 
 /**
@@ -60,6 +78,16 @@ function findContact(array, fullName) {
  */
 function removeContact(array, contact) {
   // YOUR CODE HERE
+ 
+//loop thru array
+for (let i = 0; i < array.length; i++) {
+  //if current user is specified contact, delete
+
+  if (contact.id == array[i].id) {
+    array.splice(i, 1);
+  }
+}
+  return array;
 }
 
 /**
