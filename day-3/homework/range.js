@@ -23,6 +23,19 @@
  */
 function range(start, end) {
   // YOUR CODE HERE //
+  let arr = [];
+
+  if (start > end) {
+    for (let i = start; i >= end; i--) {
+      arr.push(i);
+    }
+  }
+  if (start < end) {
+    for (let i = start; i <= end; i++) {
+      arr.push(i);
+    }
+  }
+  return arr;
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
