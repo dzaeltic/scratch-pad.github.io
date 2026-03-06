@@ -11,5 +11,16 @@ example output:
 */
 
 function countGreaterThanFour(array){
+//create storage string
+let str = '';
+      //if string length > 4, count up by one in storage. loop over array
+      for (let i = 0; i < array.length; i++) {
+            if(array[i].length > 4) {
+                  str += 0;
+            }
+      }
+   //return storage length
+   return str.length;   
+
   
 }

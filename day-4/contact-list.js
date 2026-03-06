@@ -97,6 +97,20 @@ for (let i = 0; i < array.length; i++) {
  */
 function getNamesThatBeginWithLetter(array, letter) {
   // YOUR CODE HERE
+//make storage array
+let arr = [];
+//loop thru input array
+for (let i = 0; i < array.length; i++) {
+  //if the current contact starts with letter, push into storage
+  if (array[i].nameFirst[0].toLowerCase() === letter.toLowerCase()) {
+    arr.push(array[i]);
+  }
+}
+//return
+return arr;
+
+
+
 }
 
 /**
@@ -109,6 +123,20 @@ function getNamesThatBeginWithLetter(array, letter) {
  */
 function getAllContactNames(array) {
   // YOUR CODE HERE
+//make storage string
+let str = '';
+//loop thru contact array
+  for (let i = 0; i < array.length; i++) {
+    //if last contact, don't add line break
+    if (i === array.length - 1) {
+      str += array[i].nameFirst + ' ' + array[i].nameLast;
+    } else {
+    //add contact's full name and line break otherwise
+    str += array[i].nameFirst + ' ' + array[i].nameLast + '\n';
+    }
+  }
+
+return str;
 }
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////

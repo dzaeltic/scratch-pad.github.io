@@ -16,7 +16,7 @@
 function length(string) {
   // YOUR CODE HERE //
   //return string length
-  return string.length;
+  return string.length
 }
 
 /**
@@ -25,7 +25,7 @@ function length(string) {
 
 function toLowerCase(string) {
   // YOUR CODE HERE //
-  //return lower case string
+  //return string in lower case
   return string.toLowerCase();
 }
 
@@ -51,12 +51,13 @@ function toUpperCase(string) {
  */
 function toDashCase(string) {
   // YOUR CODE HERE //
-  //split string at spaces
+  
   let arr = string.split(' ');
   //join string with dashes
   let newStr = arr.join('-');
   //makes string lower case
   return newStr.toLowerCase();
+
 }
 
 
@@ -102,15 +103,12 @@ return false;
  */
 function endsWith(string, char) {
   // YOUR CODE HERE //
-
+ 
   //if the last letter is the same as the solo char, return true
   if (string[string.length - 1].toLowerCase() === char.toLowerCase()) {
-  
-    return true;
-  } else {
-    //otherwise, return false
-    return false;
-  }
+return true
+
+} else { return false;}
 }
 
 
@@ -138,7 +136,7 @@ function concat(stringOne, stringTwo) {
  * TIP: This Function pulls out all the arguments passed to it and stores them
  *      in an Array called args.
  */
-function join() {
+function join(stringOne, stringTwo) {
   // YOUR CODE HERE //
   //move strings to an array
   var args = Array.from(arguments);
